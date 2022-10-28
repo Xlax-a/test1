@@ -5,11 +5,11 @@ import org.apache.commons.lang3.StringUtils;
 import java.util.Objects;
 
 public class Calc {
-    static double price = 0;      // 行李总价
-    static boolean right = false;   // 输入是否正确
+    public static double price = 0;      // 行李总价
+    public static boolean right = false;   // 输入是否正确
 
     // 计算特殊行李价
-    static boolean calcSpecialPrice(double w, double w1, double w2, double w3, double w4, double p1, double p2, double p3) {
+    public static boolean calcSpecialPrice(double w, double w1, double w2, double w3, double w4, double p1, double p2, double p3) {
         if (w >= w1 && w <= w2) {
             price += p1;
         }
@@ -26,7 +26,7 @@ public class Calc {
     }
 
     // 计算超重价或超尺寸价
-    static boolean calcOverWSPrice(double w, double s, double p1, double p2, double p3, double p4) {
+    public static boolean calcOverWSPrice(double w, double s, double p1, double p2, double p3, double p4) {
         if (s >= 60 && s <= 158 && w > 23 && w <= 28) {
             price += p1;
         }
@@ -46,7 +46,7 @@ public class Calc {
     }
 
     // 计算超数量价
-    static boolean calcOverCPrice(double p1, double p2, double p3, int c) {
+    public static boolean calcOverCPrice(double p1, double p2, double p3, int c) {
         if (c == 1) {
             price += p1;
         }
